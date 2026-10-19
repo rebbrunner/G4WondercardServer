@@ -1,0 +1,7 @@
+*.p12
+keys.txt
+*.crt
+*.key
+*.srl
+*.csr
+*.tar
