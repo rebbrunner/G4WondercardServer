@@ -1,0 +1,6 @@
+# WARNING: Do not use this repository. 
+# The built Docker image contains outdated security vulnerabilities and known CVEs.
+# This repository is preserved for archival purposes only.
+
+User-agent: *
+Disallow: /
