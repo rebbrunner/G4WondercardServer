@@ -32,6 +32,7 @@ Since enabled weak-enough SSL auth on purpose, this container is not intended to
 
 ## Reference
 
+- [Original Source](https://github.com/u1f992/pkmn-wfc-server)
 - [dwc_network_server_emulator](https://github.com/EnergyCube/dwc_network_server_emulator)
 - [CoWFC](https://github.com/EnergyCube/CoWFC)
 - [Poké Classic Framework](https://github.com/mm201/pkmn-classic-framework)
