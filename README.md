@@ -8,14 +8,15 @@ This image is a copy of [Original Source](https://github.com/u1f992/pkmn-wfc-ser
 Additionally to ease usage for people not as familiar with docker several scripts have been added to aid setting the repository up.
 
 1. User should download and install docker as the single dependency.
-2. When a user pulls the repository initally they should put their *legally* acquired cert (.p12) file in the repository root.
-3. Add any wondercards you would like to distribute to the repository root.
-4. Download the pre-built image file from releases (or optionally build from the Dockerfile if familiar)
-5. Run `load_image.bat` to load the pre-built image into docker
-6. Run `start.bat` to start your server.
-7. Run `config.bat` to configure your server (sets up dnsmasq with your IP and sets up your certs)
-8. Visit `localhost/?page=admin&section=Dashboard` to white list games (see below)
-9. Run `copy_wondercards.bat` to copy and `.myg` wondercard files you would like to send to your game to the server
+2. Download images and desired wondercards `from releases`
+3. When a user pulls the repository initally they should put their *legally* acquired cert (.p12) file in the repository root.
+4. Add any wondercards you would like to distribute to the repository root.
+5. Download the pre-built image file from releases (or optionally build from the Dockerfile if familiar)
+6. Run `load_image.bat` to load the pre-built images (pkmn-server and dnsmasq) into docker
+7. Run `start.bat` to start your server.
+8. Run `config.bat` to configure your server (sets up dnsmasq with your IP and sets up your certs)
+9. Visit `localhost/?page=admin&section=Dashboard` to white list games (see below)
+10. Run `copy_wondercards.bat` to copy and `.myg` wondercard files you would like to send to your game to the server
 
 Docker image based on [CoWFC](https://github.com/EnergyCube/CoWFC) & [Poké Classic Framework](https://github.com/mm201/pkmn-classic-framework).
 
