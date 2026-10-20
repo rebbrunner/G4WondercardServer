@@ -33,6 +33,10 @@ Docker image based on [CoWFC](https://github.com/EnergyCube/CoWFC) & [Poké Clas
 
 Since enabled weak-enough SSL auth on purpose, this container is not intended to be published via internet.
 
+## Wondercards
+
+Copied wondercards can be indexed by date and will copy in alphabetical order.  For example if I have two files, 1.myg and 2.myg, setting my calendar to January 1 (year doesn't matter) will send 1.myg and January 2nd will send 2.myg
+
 ## Reference
 
 - [Original Source](https://github.com/u1f992/pkmn-wfc-server)

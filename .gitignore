@@ -5,3 +5,5 @@ keys.txt
 *.srl
 *.csr
 *.tar
+_list.txt
+*.myg
