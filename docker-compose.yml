@@ -1,27 +1,50 @@
 services:
+  app:
+    image: gen4:rce
+    container_name: gen4rce-exploit
+    dns:
+      - 8.8.8.8
+    volumes:
+      - ./server:/home/server
+      - ./project:/home/project
+      - ./assets:/home/assets
+    environment:
+      HOST_IP_ADDRESS: ${UserIP}
+    tty: true
+    working_dir: /home
+    networks:
+      - backend
+  nginx-proxy:
+    image: nginx:alpine
+    container_name: nginx-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - ./configs/nginx.conf:/etc/nginx/nginx.conf:ro
+    networks:
+      - backend
   dnsmasq:
     container_name: dnsmasq
     image: strm/dnsmasq
     restart: always
     volumes:
-      - ./dnsmasq/wfc.conf:/etc/dnsmasq.d/wfc.conf
-    ports:
-      - "53:53/udp"
+      - ./configs/wfc.conf:/etc/dnsmasq.d/wfc.conf
     cap_add:
       - NET_ADMIN
+    networks:
+      - backend
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
   pkmn-server:
     container_name: pkmn-server
     image: pkmn-server:0.0.1
     volumes:
       - .:/dummy-certs
     working_dir: /dummy-certs
-    # build:
-    #   dockerfile: ./pkmn-server/Dockerfile
-    #   args:
-    #     - ADMIN_USERNAME=admin
-    #     - ADMIN_PASSWORD=opensesame
+    networks:
+      - backend
     ports:
-      - "80:80/tcp"
       - "443:443/tcp"
       - "8000:8000/tcp"
       - "9000:9000/tcp"
@@ -37,3 +60,6 @@ services:
       - "29900:29900/tcp"
       - "29901:29901/tcp"
       - "29920:29920/tcp"
+networks:
+  backend:
+    driver: bridge

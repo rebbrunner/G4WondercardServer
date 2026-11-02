@@ -1,3 +1,7 @@
+server/*
+project/*
+build/*
+*.zip
 *.p12
 keys.txt
 *.crt

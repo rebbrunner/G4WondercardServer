@@ -1,6 +1,8 @@
 set /p UserIP="Please enter your IP address: "
-echo address=/nintendowifi.net/%UserIP% > "config\wfc.conf"
+tar -xf ./rce-pak.zip
+echo address=/nintendowifi.net/%UserIP% > "configs\wfc.conf"
 docker exec pkmn-server ./gen_cert.sh
+docker compose up -d
 docker restart dnsmasq
 docker restart pkmn-server
 
