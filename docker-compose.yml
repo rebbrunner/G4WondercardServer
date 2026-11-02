@@ -4,7 +4,7 @@ services:
     image: strm/dnsmasq
     restart: always
     volumes:
-      - ./dnsmasq/wfc.conf:/etc/dnsmasq.d/wfc.conf
+      - ./configs/wfc.conf:/etc/dnsmasq.d/wfc.conf
     ports:
       - "53:53/udp"
     cap_add:
