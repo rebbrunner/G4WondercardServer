@@ -1,5 +1,5 @@
 set /p UserIP="Please enter your IP address: "
-echo address=/nintendowifi.net/%UserIP% > "dnsmasq\wfc.conf"
+echo address=/nintendowifi.net/%UserIP% > "config\wfc.conf"
 docker exec pkmn-server ./gen_cert.sh
 docker restart dnsmasq
 docker restart pkmn-server
