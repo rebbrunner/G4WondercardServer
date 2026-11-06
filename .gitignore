@@ -1,5 +1,4 @@
 server/*
-project/*
 build/*
 *.zip
 *.p12
