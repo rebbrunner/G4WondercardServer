@@ -33,8 +33,8 @@ pop {r4, pc}
 _data:
 .word 0x2111880                             @ base
 _baseToTarget:
-.word 0x9FD2                                @ offset -> target
+.word 0x9FD0                                @ offset -> target
 _size:
-.word 0x16                                  @ size
+.word 0x36                                  @ size
 
 _payload:
