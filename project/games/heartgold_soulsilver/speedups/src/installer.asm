@@ -1,3 +1,5 @@
+@ installs speedup code to wondercard
+
 .arch armv5te
 .text
 .code	32

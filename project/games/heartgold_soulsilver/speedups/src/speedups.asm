@@ -1,6 +1,6 @@
 .arch armv5te
 .text
-.code	32
+.code	16
 .thumb
 .global start
 
@@ -10,10 +10,8 @@ dest .req                           r2
 data .req                           r3
 
 _start:
-.code	16
-.thumb_func
 
-push {r0-r7,lr}
+push {r0-r7}
 
 @ load base address
 adr src,_data
@@ -33,12 +31,16 @@ add src,#0x8
 b _loop
 
 _end:
-pop {r0-r7,pc}
+pop {r0-r7}
+pop {r3,r4,r5,r6,r7,pc}
 
 .balign 4
 _data:
 .word 0x2111880                     @ base address
 
+@ 805A2602 201C0000
+@ 8E5A2602 201C0000
+@ 50170802 211C0000
 @ 280E0002 00000000
 @ 46230002 00210000
 @ EE020202 0C1C0000
