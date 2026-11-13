@@ -37,6 +37,6 @@ _data:
 _baseToTarget:
 .word 0x9FD0                                @ offset -> target
 _size:
-.word 0x36                                  @ size
+.word 0x72                                  @ size
 
 _payload:

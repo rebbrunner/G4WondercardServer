@@ -12,7 +12,7 @@ push {r0-r2,lr}
 @ copy payload to ununsed space
 adr r0,_data
 ldr r1,_dest
-mov r2,#0x50
+mov r2,#0x68
 swi 0xb
 
 blx r1
