@@ -1,0 +1,4 @@
+out_of_packets_timeout: 5
+packets:
+  - packet_type: code
+    filepath: "/home/ase_anywhere_setup/ase_anywhere_installer.bin"
