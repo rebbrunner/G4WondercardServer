@@ -1,0 +1,1 @@
+docker exec -d gen4rce-exploit python3 server/main.py
